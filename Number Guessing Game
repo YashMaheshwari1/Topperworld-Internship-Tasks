@@ -1,0 +1,30 @@
+import java.util.Scanner;
+public class guess {
+    public static void main(String args[]){
+        int n,check=0,number = 65;
+        System.out.println();
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Welcome to Guess Number Game");
+        System.out.println("You Will Be Asked To Guess A Number To Win The Game");
+        System.out.println("You Have Maximum 5 Attemp Limit");
+        for(int i=1;i<=5;i++){
+            System.out.println("Enter a guess number between 1 to 100");
+            n=sc.nextInt();
+            if(n==number){
+                System.out.println("OOhhOO!,Your Number is Correct.You Win the Game!");
+                check++;
+                break;
+            }
+            else if(n<number){
+                System.out.println("Your Guess Number is Smaller.");
+            }
+            else {
+                System.out.println("Your Guess Number is Greater.");
+            }
+        }
+        if(check==0){
+            System.out.println("You Lose The Game!");
+        }
+        sc.close();
+    }
+}
